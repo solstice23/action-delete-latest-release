@@ -22,6 +22,11 @@ octokit.repos.getLatestRelease({
         owner,
         repo,
         release_id
+    });
+    octokit.git.deleteRef({
+        owner,
+        repo,
+        release_id
     })
 }).catch(
     err =>{
