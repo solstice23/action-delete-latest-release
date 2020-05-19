@@ -23,10 +23,11 @@ octokit.repos.getLatestRelease({
         repo,
         release_id
     });
+    const tag_id = "tags/" + release_id
     octokit.git.deleteRef({
         owner,
         repo,
-        release_id
+        tag_id
     })
 }).catch(
     err =>{
